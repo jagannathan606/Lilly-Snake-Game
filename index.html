@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1320" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lilly Snake" />
+    <title>Lilly Snake</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+    <link rel="apple-touch-icon" type="image/svg+xml" href="assets/icon.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <div class="title-row">
+        <div>          
+          <h1>Lilly Snake</h1>
+          <p class="eyebrow">Arcade challenge</p>
+        </div>
+        <div class="status-panel">
+          <span class="status-label">Status</span>
+          <span id="status-pill" class="status-pill">Ready</span>
+        </div>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-box">
+          <span class="label">Score</span>
+          <span id="score">0</span>
+        </div>
+        <div class="score-box">
+          <span class="label">Best</span>
+          <span id="high-score">0</span>
+        </div>
+      </div>
+
+      <canvas id="game-board" width="400" height="400" aria-label="Snake game board"></canvas>
+
+      <div class="controls">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" class="secondary" type="button">Pause</button>
+        <button id="reset-btn" class="secondary" type="button">Reset</button>
+      </div>
+
+      <div class="mobile-toolbar">
+        <div class="settings-panel">
+          <label class="difficulty-picker" for="difficulty-select">
+            <span>Difficulty</span>
+            <select id="difficulty-select" aria-label="Select game difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+
+        <button id="sound-btn" class="icon-btn" type="button" aria-label="Toggle sound">🔊</button>
+      </div>
+
+      <div class="touch-controls" aria-label="Directional controls">
+        <button data-direction="up">↑</button>
+        <div class="middle-row">
+          <button data-direction="left">←</button>
+          <button data-direction="down">↓</button>
+          <button data-direction="right">→</button>
+        </div>
+      </div>
+
+      <div class="game-credit">Built by Jagannathan</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
